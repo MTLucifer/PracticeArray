@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 8</title>
+</head>
+<body>
+<p>Nhập 10 số (cách nhau bởi dấu cách) : <input type="text" id="number"></p>
+<input type="button" onclick="check()" value="Kiểm tra">
+<span id="result"> </span>
+<script>
+    function check(){
+        let number =  document.getElementById('number').value;
+        let strArray = number.split(' ');
+        let numArray = strArray.map(Number);
+        for (let i = 0; i < numArray.length-1; i++) {
+                for (let j = i + 1 ; j < numArray.length; j++) {
+                    if (numArray[i] < numArray[j]) {
+                       let temp;
+                       temp = numArray[j];
+                       numArray[j] = numArray[i];
+                       numArray[i] = temp;
+                }
+            }
+
+        } document.getElementById('result').innerHTML = "Sắp xếp lại: " + numArray;
+    }
+
+</script>
+</body>
+</html>

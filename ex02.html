@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2</title>
+</head>
+<body>
+<span id="show"></span>
+<script>
+    let array = [3,32,34,2,52,52,5,76,7,8];
+    let index = 0;
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+            if (array[i] > max){
+                max = array[i];
+                index = i;
+            }
+    }
+    document.getElementById('show').innerHTML = "Số nguyên lớn nhất ở vị trí : " + index + " Có giá trị là: " + max;
+</script>
+</body>
+</html>

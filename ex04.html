@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 4</title>
+</head>
+<body>
+<script>
+    let array = [3,32,34,2,52,52,5,76,7,8,59,37,94];
+    let first = 0;
+    let last = array.length-1;
+    document.write(array + "<br/>")
+    while (first<last){
+        let a = array[first];
+        array[first] = array[last];
+        array[last] = a;
+        first ++;
+        last --;
+    }
+    document.write("Đảo lại là: " + array)
+</script>
+</body>
+</html>

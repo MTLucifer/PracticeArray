@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 1</title>
+</head>
+<body>
+<span id="show"></span>
+<script>
+let array = [3,32.3,34,2,52,52,5.67,76,7.45,8];
+let show = document.getElementById('show');
+show.innerHTML = "Các số nguyên dương lớn hơn 10 là: "
+for (let i = 0; i < array.length; i++) {
+    if (array[i]%1 === 0){
+        if (array[i] > 10){
+            show.innerHTML += array[i] + " ";
+        }
+    }
+}
+</script>
+</body>
+</html>

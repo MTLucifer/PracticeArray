@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 9</title>
+</head>
+<body>
+<p>Nhập 10 số a (cách nhau bởi dấu cách) : <input type="text" id="numA"></p>
+<p>Nhập 10 số b (cách nhau bởi dấu cách) : <input type="text" id="numB"></p>
+<input type="button" onclick="check()" value="Kiểm tra">
+<span id="result"> </span>
+<script>
+    function check() {
+        let numA = document.getElementById('numA').value;
+        let numB = document.getElementById('numB').value;
+        let arrayA = numA.split(' ');
+        let arrayB = numB.split(' ');
+        let arrayC = [];
+        arrayC.length = 20;
+        for (let i = 0; i < arrayA.length; i++) {
+            arrayA[i] = arrayC[i];
+            for (let j = arrayC.length-1; j > arrayA.length - 1 ; j++) {
+                arrayB[j] = arrayC[j];
+            }
+        }
+        document.getElementById('result').innerHTML = arrayC;
+    }
+
+
+</script>
+</body>
+</html>

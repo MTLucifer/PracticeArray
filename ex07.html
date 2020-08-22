@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 7</title>
+</head>
+<body>
+<p>Nhập 10 số (cách nhau bởi dấu cách) : <input type="text" id="number"></p>
+<input type="button" onclick="check()" value="Kiểm tra">
+<span id="result"> </span>
+<script>
+    function check(){
+        let number = document.getElementById('number').value;
+        let numArray = number.split(' ');
+        let find = prompt("Nhập số cần kiểm tra: ")
+        for (let i = 0; i < 11; i++){
+            if (find === numArray[i]){
+                index =i;
+                for (let j = index; j < numArray.length ; j++) {
+                    numArray[j] = numArray[j+1]
+                    document.getElementById('result').innerHTML = "Dãy số sau khi thêm là: " + numArray;
+                }
+            break;
+            }
+            else
+                document.getElementById('result').innerHTML = "Dãy số không có giá trị nhập"
+        }
+    }
+</script>
+</body>
+</html>
